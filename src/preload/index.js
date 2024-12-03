@@ -21,7 +21,7 @@ if (process.contextIsolated) {
   window.api = api;
 }
 
-// レンダラーからNode.jsにアクセスするためのファイル
+// レンダラーからNode.jsにアクセスするためのAPI登録
 contextBridge.exposeInMainWorld('database', {
   searchData: (searchTerm) => ipcRenderer.invoke('search-data', searchTerm)
 });

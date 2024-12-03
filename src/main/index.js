@@ -3,7 +3,7 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
-// main.jsはNode.jsにて動作する requireにてelectronモジュールを読み込んでいる
+// sqlite3
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./database.db', (err) => {
   if (err) {
