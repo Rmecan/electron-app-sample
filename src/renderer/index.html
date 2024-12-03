@@ -14,26 +14,21 @@
 
   <body>
     <div id="app">
-      <h1>ElectronでSqlite</h1>
+      <h1>SQLiteのユーザー一覧</h1>
+      <input type='button' id='initButton' value='テーブル初期化'>
+      <P>
+        <input type="text" id="searchInput" placeholder="名前で検索">
+        <button id="searchButton">検索</button>
+      </P>
+
+      <h2>検索結果:</h2>
+      <div id="results"></div>
 
       <ul class="versions">
         <li class="electron-version"></li>
         <li class="chrome-version"></li>
         <li class="node-version"></li>
       </ul>
-
-      <div>
-        <p>テキストをSqlite3にて記録するサンプルです</p>
-      </div>
-      <div class="actions">
-        <input type='text' id="memoInput">
-        <input type='button' id='insertBtn' value='書込み' class="action">
-        <div class="action">
-          <a id="ipcHandler" target="_blank" rel="noreferrer">Send IPC</a>
-        </div>
-      </div>
-      
-      <div id='gridTag'></div>
 
     </div>
     <script type="module" src="./src/renderer.js"></script>
